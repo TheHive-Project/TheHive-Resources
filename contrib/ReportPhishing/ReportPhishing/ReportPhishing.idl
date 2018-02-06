@@ -1,0 +1,49 @@
+// ReportPhishing.idl : IDL source for ReportPhishing
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (ReportPhishing.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+
+[
+	object,
+	uuid(CE895442-9981-4315-AA85-4B9A5C7739D8),
+	dual,
+	nonextensible,
+	helpstring("IRibbonCallback Interface"),
+	pointer_default(unique)
+]
+interface IRibbonCallback : IDispatch {
+	[id(42), helpstring("Button Callback")]
+	HRESULT ButtonClicked([in]IDispatch* ribbonControl);
+};
+
+
+[
+	object,
+	uuid(9F86E6A5-F05A-47CC-9FD8-1185814CBBAE),
+	dual,
+	nonextensible,
+	pointer_default(unique)
+]
+interface IConnect : IDispatch{
+};
+[
+	uuid(C1308BDA-D900-4EC0-9F7E-ABC8EBB88FB0),
+	version(1.0),
+]
+library ReportPhishingLib
+{
+	importlib("stdole2.tlb");
+	[
+		uuid(B859791A-13CE-41F7-9CBC-CCD788E102BC)		
+	]
+	coclass Connect
+	{
+		[default] interface IRibbonCallback;
+	};
+};
+

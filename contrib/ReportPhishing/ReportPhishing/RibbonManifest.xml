@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<customUI xmlns="http://schemas.microsoft.com/office/2006/01/customui">
+    <ribbon>
+        <tabs>
+            <tab idMso="TabMail">
+                <group id="Phishing">
+                    <button id="ReportPhishing" 
+                        imageMso="PermissionRestrict" 
+                        size="large" 
+                        label="Report Phishing" 
+                        supertip="If you receive an email that you think looks suspicious, please report it by selecting the email and clicking this button"
+                        screentip="Report a Phishing Email"
+                        onAction="ButtonClicked"/>
+                </group>
+            </tab>
+        </tabs>
+    </ribbon>
+</customUI>

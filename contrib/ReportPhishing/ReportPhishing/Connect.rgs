@@ -1,0 +1,51 @@
+HKCR
+{
+	ReportPhishing.Connect.1 = s 'Connect Class'
+	{
+		CLSID = s '{B859791A-13CE-41F7-9CBC-CCD788E102BC}'
+	}
+	ReportPhishing.Connect = s 'Connect Class'
+	{		
+		CurVer = s 'ReportPhishing.Connect.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {B859791A-13CE-41F7-9CBC-CCD788E102BC} = s 'Connect Class'
+		{
+			ProgID = s 'ReportPhishing.Connect.1'
+			VersionIndependentProgID = s 'ReportPhishing.Connect'
+			ForceRemove Programmable
+			InprocServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Apartment'
+			}
+			TypeLib = s '{C1308BDA-D900-4EC0-9F7E-ABC8EBB88FB0}'
+			Version = s '1.0'
+		}
+	}
+}
+
+HKCU
+{
+    NoRemove Software
+    {
+        NoRemove Microsoft
+        {
+            NoRemove Office
+            {
+                NoRemove Outlook
+                {
+                    NoRemove Addins
+                    {
+                        ReportPhishing.Connect
+                        {
+                            val Description = s 'Outlook Addin to report Phishing Emails'
+                            val FriendlyName = s 'Report Phishing Addin'
+                            val LoadBehavior = d 3
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
