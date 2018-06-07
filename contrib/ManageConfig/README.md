@@ -16,6 +16,6 @@ These script allow to
 
 - Submit the configuration:
 ```
-./fetch_config.py -k <API_KEY> -u <theHive url> -o /tmp/my_config.conf
+./submit_config.py -k <API_KEY> -u <theHive url> -c /tmp/my_config.conf
 ```
  ConflictError messages can be printed if one element already exists (but wont stop the process)
