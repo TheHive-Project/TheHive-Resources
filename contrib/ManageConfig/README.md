@@ -3,6 +3,8 @@
 These script allow to
     - retrieve the configuration (datatypes, case templates, metrics and custom fields) and store it in a file.
     - submit a configuration to an instance of theHive
+    
+That can be used to easily clone the config of a theHive explo project to a fresh instance of TheHive.
 
 
 
