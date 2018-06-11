@@ -1,8 +1,8 @@
 # Export/Import TheHive config
 
 These script allow to
-    - retrieve the configuration (datatypes, case templates, metrics and custom fields) and store it in a file.
-    - submit a configuration to an instance of theHive
+* retrieve the configuration (datatypes, case templates, metrics and custom fields) and store it in a file.
+* submit a configuration to an instance of theHive
 
 # Config file format:
 
@@ -68,3 +68,8 @@ echo '
 # Dependences :
 
 Python3
+
+# Author
+* [François Ihry](https://github.com/francoisihry) 
+* license : **AGPL V3**
+
